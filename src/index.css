@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 6%;
+    --foreground: 0 0% 98%;
+    --card: 222 39% 9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 222 39% 9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 30% 14%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 222 30% 14%;
+    --muted-foreground: 217 15% 65%;
+    --accent: 189 94% 55%;
+    --accent-foreground: 222 47% 6%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 222 25% 18%;
+    --input: 222 25% 18%;
+    --ring: 217 91% 60%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 0 0% 98%;
+    --card: 222 39% 9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 222 39% 9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222 30% 14%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 222 30% 14%;
+    --muted-foreground: 217 15% 65%;
+    --accent: 189 94% 55%;
+    --accent-foreground: 222 47% 6%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 222 25% 18%;
+    --input: 222 25% 18%;
+    --ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Manrope', sans-serif;
+    background-color: #0B0F19;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  ::selection {
+    background-color: #2563EB;
+    color: #ffffff;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0B0F19;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2563EB;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(19, 25, 42, 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+  }
+  .glass-strong {
+    background: rgba(15, 20, 35, 0.75);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(148, 163, 184, 0.14);
+  }
+  .text-gradient {
+    background: linear-gradient(120deg, #60A5FA 0%, #3B82F6 45%, #22D3EE 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .noise-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+}
