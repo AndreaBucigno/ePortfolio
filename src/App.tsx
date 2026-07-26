@@ -43,7 +43,7 @@ function App() {
   return (
     <HelmetProvider>
       <Helmet>
-        <title>dev.folio — Sviluppo siti web moderni per aziende e professionisti</title>
+        <title>Andrea Bucigno  — Sviluppo siti web moderni per aziende e professionisti</title>
         <meta
           name="description"
           content="Realizzo siti web moderni, veloci e ottimizzati per aziende, negozi e professionisti. Design su misura, performance elevate, risultati misurabili."
